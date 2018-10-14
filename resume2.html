@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+   <form action="ResumeBuilder" method="get" id="resumeForm">
+    <div id="toDelete"><h3 id="contactDelete">Contact Information</h3>
+    
+
+    <div class="col-4">
+      <p id="firstNameDelete">First name:</p>
+      <br>
+      
+      <input type="text" class="form-control" name="fname" id="fname"><br/> <br><br>
+      
+      <p id="lastNameDelete"> Last name:</p> 
+      <br>
+      
+      <input type="text" class="form-control" name="lname" id="lname"><br/><br><br>
+      
+      <p id= "phoneNumberDelete">Phone number: </p>
+      <br> 
+      
+      <input type="text" placeholder = "Landline/Cell Phone" name="phoneNumber" id="phoneNumber" class="form-control"><br/><br>
+      
+      <p id="emailDelete"> Email: </p> 
+      <br>
+      <input type="text" name="email" id="email" class="form-control"><br/><br>
+      
+    <p id="addressDelete">Address: </p>
+    <br><input type="text" name="address" id="address" class="form-control"></p><br/><br>
+    
+    <h3 id="workExperienceDelete">Work Experience</h3>
+    <p id="workExperienceDelete2">Enter your work experience here. Order your jobs in reverse chronicle order - put your most recent job first.</p>
+    
+    <p id="companyDelete">Company: </p>
+    <br>
+    <input placeholder ="Name of company" type="text" name="company1" id="company1" class="form-control"><br/><br></p>
+    
+    <p id="roleDelete">Role:</p>
+    <br> 
+    <input type="text" placeholder ="Position/role at job" name="position1" id="position1" class="form-control"><br>
+    <p id="startedWorkDelete">Started Work:</p><br>
+    <input type="text" placeholder ="Year Started at company" name="startdate1" id="startdate1" class="form-control"><br>
+    <p id="endWorkDelete">End Work: </p><br><input type ="text" name="enddate1" id="enddate1" class="form-control"><br/><br>
+    <p id="workDescriptionDelete">Work Description:</p> <br>
+      <!--<p id="describeDelete">Describe your responsibilities and accomplishments. Use phrases instead of complete sentences. Be as specific as possible!</p>-->
+      <textarea name="description1" id="description1" class="form-control" placeholder = "Describe your responsibilities and accomplishments. Use phrases instead of complete sentences. Be as specific as possible!"></textarea><br/><br>
+      <h3 id="mostRecentDelete">Most Recent Education</h3>
+      <br>
+      
+      <p id="schoolDelete">School:</p><br><input type="text" placeholder ="Name of School/Institution" name="school" id="school" class="form-control"><br><br>
+      
+      <p id="locationDelete">Location:</p><br> <input type="text" placeholder ="Location of School/Institution" name="location1" class="form-control" id="location1"><br><br>
+      
+      <p id= "majorDelete">Area of Study/Major:</p><br><input type="text" placeholder ="" name="major" id="major" class="form-control"><br><br>
+      
+      <h3 id="skillsDelete">Skills</h3>
+      <p id="moreInfoDelete">Additional Information:</p> <br><textarea class="form-control" name="skills" id="skills"></textarea><br><br>
+     </div>
+      
+       <!--preview resume button-->
+    <center>
+    <input type="button" value="1. Preview Resume" onClick="writeValues(form)" id="previewDelete">
+      </center>
+      <span id="resumeFinal"></span>
+      <br>
+    </div>
+</form>
+  </body>
+</html>

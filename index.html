@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script type="text/javascript" src="scriptTest.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>compass.</title>
+  </head>
+  <body onload="translateText()">
+
+      <script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+    <div class="w3-container w3-animate-opacity">
+      <ul class="slideshow">
+          <li><span>Image 01</span></li>
+          <li><span>Image 02</span></li>
+          <li><span>Image 03</span></li>
+          <li><span>Image 04</span></li>
+          <li><span>Image 05</span></li>
+          <li><span>Image 06</span></li>
+        </ul>
+        
+        <h1 id="name" class="textToTranslate">compass.</h1>
+        <span class="glyphicon glyphicon-arrow-down"></span>
+    </div>
+
+    <div class="row back">
+      <nav class="navbar" id="navbar">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li id="firstlist" class="boldfont"><a href="#" class="textToTranslate" >Job Search</a></li>
+              <li class="boldfont"><a href="resume.html" class="textToTranslate">Resume Help</a></li>
+            <!--  <div class="navbar-header">-->
+            <!--  <a class="navbar-brand textToTranslate" href="#">compass</a>-->
+            <!--</div>-->
+              <li class="nav-item dropdown boldfont">
+                <a class="nav-link dropdown-toggle textToTranslate" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Need to Know</a>
+                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Laws</a>
+                  <a class="dropdown-item" href="#">Healthcare</a>
+                  <a class="dropdown-item" href="#">Transportation</a>
+                </div>
+              </li>
+              <li class="boldfont"><a href="languageSelect.html" class="textToTranslate">Change Language</a></li>
+            </ul>
+          </div>
+      </nav>
+      <div class="row" id="startrow">
+        <div class="col-md-2" id="start" class = "textToTranslate"><h3 id="missiontitle" class ="textToTranslate">Not sure where to start?</h3><a href="quiz.html"><p class="normallargefont textToTranslate" >Click here to get going!</p></a></div>
+    </div>
+    <div class="row" id="missionstatement">
+        <div class="col-md-2 normalfont" id="mission"><h3 id="missiontitle" class ="textToTranslate">mission statement</h3><br><p class = "textToTranslate">Compass' mission is to help foreign born individuals feel welcomed and prepared in their new country of the United States. We aim to help immigrants and refugees with the often difficult employment process, and Compass also provides easy-to-understand financial resources. We want to help our new community members connect with their region.Compass hopes to help navigate your new beginning.</p></div>
+    </div>
+    <div class="row" id="footer">
+      <div class="col-md-2 boldfont">Privacy Policy<br>Made by the Smart Kookies</div>
+    </div>
+    
+  </div>
+<!--Modul thing-->
+
+<!--Privacy-->
+
+</body>
+</html>
