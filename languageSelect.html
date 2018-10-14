@@ -2,7 +2,9 @@
 <html>
 <head>
    <link rel="icon" href="images/eye.JPG">
-  <title>Choose Language</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="images/compass2.png"/>
+  <title>compass</title>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script type="text/javascript" src="script.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,7 +18,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
-<body>
+<body class="languageBody">
     <!--<div class="w3-container w3-animate-opacity" id ="languageBackground">-->
     <!--  <ul class="slideshow">-->
     <!--      <li><span>Image 01</span></li>-->
@@ -30,6 +32,9 @@
         <!--<h1 id="name" class="textToTranslate">compass.</h1>-->
         <!--<span class="glyphicon glyphicon-arrow-down"></span>-->
     <!--</div>-->
+    <div class="row languageDescription">
+        <h3 class="boldfont languageWords">Choose a language:</h3>
+    </div>
     <form id = "chooseLanguage">
     <!--Carosel-->
   <div class="carousel">
@@ -206,6 +211,6 @@
     });</script>
 
 </form>
-<a href="index.html" id="languageButton"><button>Go</button></a>
+    <div class="row buttonrow"><a href="index.html" id="languageButton"><button type="button" class="btn btn-warning">Go</button></a></div>
 </body>
 </html>
