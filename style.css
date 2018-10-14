@@ -3,6 +3,31 @@
      width: 100%;
 }
 
+#compass {
+    position:absolute;
+    width: 5%;
+    height: 12%;
+    margin-left: 47%;
+    margin-top: 13%;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#arrow {
+    position: absolute;
+    width: 2%;
+    height: 10%;
+    margin-top: 35%;
+}
+
+#compass:hover
+{
+    cursor: default;
+    transform: rotate(360deg);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+
+
 .boldfont {
     font-family: 'Karla';
     font-weight: 700;
@@ -38,7 +63,7 @@ nav a:hover {
     margin-top: 80px;
     position: absolute;
     margin-left: 33%;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 .w3-container {
@@ -120,7 +145,7 @@ body {
 }
 
 #firstlist {
-    margin-left: 35%;
+    margin-left: 25%;
 }
 
 ul {
@@ -129,9 +154,10 @@ ul {
 
 .glyphicon {
     color:white;
-    margin-left: 49%;
+    margin-left: 45%;
     margin-top: 35%;
     font-size: 40px;
+    visibility: hidden;
 }
 
 #footer {

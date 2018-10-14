@@ -1,4 +1,3 @@
-
 sessionStorage("language", "en");
 function selectLanguage(clicked_id) {
     console.log("language!")
@@ -12,7 +11,10 @@ function translateText() {
     var translation ;
     // the current language selected
     var language = sessionStorage.getItem("language")
-
+    if (language == "en"){
+        
+    }
+    else{
     console.log(language)
     var translateApiKey = "trnsl.1.1.20181013T150223Z.7f45f43c8790d477.ed5d567727ed3b5eda3ad57ab47cb8c1f843d927"
     // go through all elements and check if the class is equal to text
@@ -38,6 +40,7 @@ function translateText() {
     }
     setTimeout(function(){console.log(allText)},4000)
     setTimeout(displayText,5500)
+    }
     
 }
 
@@ -54,29 +57,3 @@ function displayText(){
     }
 
 }
-
-// function translate() {
-//     var newText;
-//     var currentElement = all[i];
-//     var currentText = currentElement.innerHTML
-//     // get the class name of each element
-//     var className = currentElement.className
-//     // if the class name of current element is equal to textToTranslate
-//     // get the innerHTML of the current element and store it in textToTranslate
-//     var textToTranslate = currentText
-//     // console.log(textToTranslate)
-//     // do some api stuff
-//     var translateEndpoint = `https://translate.yandex.net/api/v1.5/tr.json/translate?key=${translateApiKey}&text=${textToTranslate}&lang=${language}`
-//     if (className == "textToTranslate") {
-//         console.log(currentText)
-//         fetch(translateEndpoint)
-//             .then(function(data) {
-//                 return data.json()
-//             })
-
-//             .then(function(json) {
-//                 newText = json.text.toString()
-//                 console.log(newText)
-//             })
-//     }
-// }

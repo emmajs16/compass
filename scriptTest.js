@@ -7,47 +7,45 @@ function selectLanguage(clicked_id) {
 }
 
 var englishText = [];
+var translatedText = [];
 function translateText(){
     englishText = [];
     var all = document.getElementsByClassName("textToTranslate")
     for (var i = 0, max = all.length; i < max; i++) {
-        
+        englishText.push(all[i].innerHTML) 
+    }
+    console.log(englishText)
+    translate()
+}
+function translate() {
+    var translation ;
+    // the current language selected
+    var language = sessionStorage.getItem("language")
+
+    console.log(language)
+    var translateApiKey = "trnsl.1.1.20181013T150223Z.7f45f43c8790d477.ed5d567727ed3b5eda3ad57ab47cb8c1f843d927"
+    // go through all elements and check if the class is equal to text
+    for (var i = 0, max = englishText.length; i < max; i++) {
+        var textToTranslate = englishText[i]
+        var translateEndpoint = `https://translate.yandex.net/api/v1.5/tr.json/translate?key=${translateApiKey}&text=${textToTranslate}&lang=${language}`
+        setTimeout(function() {fetch(translateEndpoint)
+        .then(function(data) {
+            return data.json()
+            })
+
+        .then(function(json) {
+            // all[i].innerHTML = json.text
+            
+            translation = json.text.toString()
+            console.log(translation)
+            })
+            translatedText.push(translation)
+        }, 1000);
     }
     
-}
-// function translateText() {
-//     allText = []
-//     var translation ;
-//     // the current language selected
-//     var language = sessionStorage.getItem("language")
-
-//     console.log(language)
-//     var translateApiKey = "trnsl.1.1.20181013T150223Z.7f45f43c8790d477.ed5d567727ed3b5eda3ad57ab47cb8c1f843d927"
-//     // go through all elements and check if the class is equal to text
-//     var all = document.getElementsByClassName("textToTranslate");
-//     for (var i = 0, max = all.length; i < max; i++) {
-//         //   setTimeout(translate, 2000);
-//         console.log(all[i].innerHTML)
-//         var textToTranslate = all[i].innerHTML
-//         var translateEndpoint = `https://translate.yandex.net/api/v1.5/tr.json/translate?key=${translateApiKey}&text=${textToTranslate}&lang=${language}`
-//         fetch(translateEndpoint)
-//         .then(function(data) {
-//             return data.json()
-//             })
-
-//         .then(function(json) {
-//             // all[i].innerHTML = json.text
-//             setTimeout(function() {
-//             translation = json.text.toString()
-//             console.log(translation)
-//             })
-//             allText.push(translation)}, 2000);
-//             console.log(all[i].innerHTML)
-//     }
-//     setTimeout(function(){console.log(allText)},4000)
-//     setTimeout(displayText,5500)
+    setTimeout(function(){console.log(translatedText)},10000)
     
-// }
+}
 
 
 function displayText(){

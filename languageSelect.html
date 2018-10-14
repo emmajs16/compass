@@ -2,7 +2,7 @@
 <html>
 <head>
    <link rel="icon" href="images/eye.JPG">
-  <title>Thing</title>
+  <title>Choose Language</title>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <script type="text/javascript" src="script.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,12 +17,25 @@
 
 </head>
 <body>
+    <!--<div class="w3-container w3-animate-opacity" id ="languageBackground">-->
+    <!--  <ul class="slideshow">-->
+    <!--      <li><span>Image 01</span></li>-->
+    <!--      <li><span>Image 02</span></li>-->
+    <!--      <li><span>Image 03</span></li>-->
+    <!--      <li><span>Image 04</span></li>-->
+    <!--      <li><span>Image 05</span></li>-->
+    <!--      <li><span>Image 06</span></li>-->
+    <!--    </ul>-->
+        
+        <!--<h1 id="name" class="textToTranslate">compass.</h1>-->
+        <!--<span class="glyphicon glyphicon-arrow-down"></span>-->
+    <!--</div>-->
     <form id = "chooseLanguage">
     <!--Carosel-->
   <div class="carousel">
       <!--English-->
     <a onclick="selectLanguage(this.id)" id="en"><div class="carousel-item" >
-        <a href="index.html"><img src="https://images.ecosia.org/cZZbuDbzYhIoQAVljbB_g6PmVgI=/0x390/smart/https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fa%2Fae%2FFlag_of_the_United_Kingdom.svg%2F1200px-Flag_of_the_United_Kingdom.svg.png" > </a>
+        <img src="https://images.ecosia.org/cZZbuDbzYhIoQAVljbB_g6PmVgI=/0x390/smart/https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fen%2Fthumb%2Fa%2Fae%2FFlag_of_the_United_Kingdom.svg%2F1200px-Flag_of_the_United_Kingdom.svg.png" >
         <h2 class ="languageText">English</h2>
     </div>
     </a>
@@ -185,14 +198,14 @@
     </div>
     </a>
 
-    
-    
   </div>
+ 
   <script type="text/javascript"> 
     $(document).ready(function(){
       $('.carousel').carousel();
     });</script>
+
 </form>
-<a href="index.html"><button>Go</button></a>
+<a href="index.html" id="languageButton"><button>Go</button></a>
 </body>
 </html>
